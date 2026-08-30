@@ -17,10 +17,9 @@ columns=['decimalLatitude', 'decimalLongitude', 'year', 'Arunachal Pradesh',
        'Uttar Pradesh', 'Uttarakhand', 'West Bengal', 'Gyps fulvus',
        'Gyps himalayensis', 'Gyps indicus', 'Gyps tenuirostris', 'month_sin',
        'month_cos', 'day_sin', 'day_cos']
-
-vulture_df=pd.DataFrame(data=np.zeros(1,len(columns)),columns=columns)
                         
 def data_preprocessor(lat,lon,year,state,species,month,day):
+  vulture_df=pd.DataFrame(data=np.zeros(1,len(columns)),columns=columns)
   if model is None:
     return {"meesage":"Software not working right now. Please try again later."}
   try:
